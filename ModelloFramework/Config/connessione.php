@@ -1,5 +1,5 @@
 <?php
-	$link = mysql_connect('localhost', '5a_giommil', 'giommil');
+	$link = mysql_connect('scuola.itisurbino.it:1080', '5a_giommil', 'giommil');
 	if (!$link){
 		die ('Impossibile connettersi: ' . mysql_error());		
 	}
