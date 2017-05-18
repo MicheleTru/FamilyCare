@@ -1,5 +1,5 @@
 <?php
-	$link = mysql_connect('localhost', 'root', 'root');
+	$link = mysql_connect('ubuntu@52.42.119.168', 'root', 'root');
 	if (!$link){
 		die ('Impossibile connettersi: ' . mysql_error());		
 	}
