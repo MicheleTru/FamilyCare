@@ -1,0 +1,116 @@
+div.container {
+	width: 100%;
+	border: 1px solid gray;
+}
+
+header, footer {
+	padding: 1em;
+	color: white;
+	background-color: DarkRed ;
+	clear: left;
+	text-align: center;
+}
+
+nav {
+	float: left;
+	height: 100%;
+	max-width: 200px;
+	margin: 0;
+	padding: 1em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: white;
+}
+
+li a {
+    display: block;
+    color: DarkRed;
+    padding: 11px 20x;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: DarkRed;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color:DarkRed;
+    color: white;
+}
+
+article {
+	margin-left: 200px;
+	border-left: 1px solid grey;
+	padding: 1em;
+	overflow: hidden;
+}
+
+.button {
+	display: inline-block;
+	padding: 5px 10px;
+   	font-size: 15px;
+    cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: DarkRed;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px #999;
+}
+			
+.button:hover {background-color: #cc0000}
+
+
+.button:active {
+	background-color: #cc0000;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+th, td{
+	border-bottom: 1px solid gray
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+
+input[type=text], select {
+	width: 100%;
+    padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=number], select {
+	width: 100%;
+    padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+a.linkTabella:link, a.linkTabella:visited {
+	background-color: #f2f2f2;
+	color: black;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a.linkTabella:hover, a.linkTabella:active {
+	background-color: DarkRed; 
+	color: white;
+}
