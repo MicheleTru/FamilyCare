@@ -1,9 +1,9 @@
 <?php
-	$link = mysql_connect('localhost', 'phpmyadmin', 'root');
+	$link = mysql_connect('localhost', 'root', 'root');
 	if (!$link){
 		die ('Impossibile connettersi: ' . mysql_error());		
 	}
-	$db_selected = mysql_select_db('phpmyadmin', $link);
+	$db_selected = mysql_select_db('root', $link);
 	if (!$db_selected){
 		die ('Impossibile connettersi al database: ' . mysql_error());
 	}
