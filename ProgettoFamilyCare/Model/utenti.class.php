@@ -30,8 +30,8 @@
 		
 		public function save(){
 			$query=sprintf("insert into utenti (username, password) values ('%s', SHA1('%s'));",
-								$this->username,
-								$this->password);
+								$username,
+								$password);
 			
 			mysql_query($query);
 			#UtenteTabella::save($this);
