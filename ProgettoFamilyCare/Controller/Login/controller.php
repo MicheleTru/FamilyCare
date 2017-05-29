@@ -13,18 +13,13 @@
 			break;
 		
 		case 'doLogin':
-			$username=NULL;
-			if(UtenteTabella::getByUsernamePassword($_POST['username'], sha1 ($_POST['password'])) != NULL){
-				$username =  UtenteTabella::getByUsernameAndPassword($_POST['username'], sha1 ($_POST['password']));
-				$_SESSION['username']=$username;
-				echo "Benvenuto";
-			}else{
-				echo '<script language="javascript">';
-				echo 'alert ("Credenziali errate! Riprova")';
-				echo '</script>'; 	
-				$action = 'login';
-				$content=get_include_contents("../Controller/Login/Templates/form.php");
+			$username = UtenteTabella::getByUsernameAndPassword($_POST['username'], $_POST['password']);
+			if ($username != NULL ) {
+				$_SESSION['user_id'] = $username->getId();;
+				echo Benvenuto;
+				break;
 			}
+			header("Location: ?controller=login&action=login");
 			break;
 			
 		
