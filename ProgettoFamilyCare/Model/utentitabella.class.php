@@ -9,7 +9,7 @@
 								$utente->getPassword(),
 								$utente->getId());
 			}else{
-				$query=sprintf("insert into utenti (username, password) values ('%s', SHA1('%s'));",
+				$query=sprintf("insert into utenti (username,password) values ('%s',SHA1('%s'));",
 								$utente->getUsername(),
 								$utente->getPassword());
 			}
