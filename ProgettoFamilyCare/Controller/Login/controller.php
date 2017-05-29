@@ -13,7 +13,7 @@
 			break;
 		
 		case 'doLogin':
-			if(TabellaUtente::getByUsernameAndPassword($_POST['username'], $_POST['password'])){
+			if(UtenteTabella::getByUsernameAndPassword($_POST['username'], $_POST['password'])){
 				$_SESSION['username'] = $_POST['username'];
 				echo "Benvenuto";
 				break;
@@ -34,10 +34,7 @@
 			if (UtenteTabella::getByUsername($_POST['username'], sha1 ($_POST['password'])) != NULL){
 				$utente->save();
 				header ("Location: index.php?controller=login&action=login");
-			}else{
-				echo '<script language="javascript">';
-				echo 'alert ("Username non disponibile! Riprova")';
-				echo '</script>'; 	
+			}else{	
 				$action = 'register';
 				$content=get_include_contents("../Controller/Login/Templates/form_register.php");
 			}
