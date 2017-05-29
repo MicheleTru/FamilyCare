@@ -15,7 +15,7 @@
 		case 'doLogin':
 			$username = UtenteTabella::getByUsernameAndPassword($_POST['username'], $_POST['password']);
 			if ($username != NULL ) {
-				$_SESSION['user_id'] = $username->getId();;
+				$_SESSION['user_id'] = $username->getId();
 				echo Benvenuto;
 				break;
 			}
