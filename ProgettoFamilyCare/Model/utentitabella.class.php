@@ -52,7 +52,7 @@
 		$query=sprintf("SELECT * FROM utenti WHERE username='%s' AND password='%s';", $user, sha1($pass));
 		mysql_query($query);
 			print_r(mysql_affected_rows());
-		if(mysql_affected_rows()!=1){
+		if(mysql_affected_rows()!=0){
 			
 			print('Errore, credenziali errate');
 			return FALSE;
