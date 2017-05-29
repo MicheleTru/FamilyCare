@@ -29,7 +29,7 @@
 			
 		case 'doRegister':
 			$utente = new Utente();
-			echo $_POST['username'];
+			print_r($_POST['username']);
 			echo $_POST['password'];
 			$utente->setUsername($_POST['username']);
 			$utente->setPassword($_POST['password']);
