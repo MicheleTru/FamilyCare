@@ -31,9 +31,12 @@
 				    </label>
 				</div>
 				<button class="btn btn-lg btn-primary" type="submit" value="Login">Login</button>
+				<p>Sei un nuovo membro?? <a href="form_register.php" class="">Sign up</a></p>
 			    </form><!-- /form -->
 			</div><!-- /card-container -->
 		    </div><!-- /container -->
 		
 	</body>
+</html>
+
 </html>
