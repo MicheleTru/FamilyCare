@@ -11,7 +11,7 @@
 		    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 		    <div class="container">
-		    <h1 class="welcome text-center">Welcome to <br> Ice Code</h1>
+		    <h1 class="welcome text-center">Welcome to <br> FamilyCare</h1>
 			<div class="card card-container">
 			<h2 class='login_title text-center'>Login</h2>
 			<hr>
