@@ -54,7 +54,7 @@
 			break;
 	}
 	
-	if($auth == TRUE){
+	if($auth != TRUE){
 #		require ("../Layout/layout.php");
 #	}else{
 		
