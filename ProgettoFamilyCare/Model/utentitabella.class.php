@@ -58,8 +58,8 @@
 			return TRUE;
 		}
 		
-		public static function getByUsername($username){
-			$query = sprintf ("select username from utenti", $username);
+		public static function getByUsername($user){
+			$query = sprintf ("select username from utenti", $user);
 			$result = mysql_query($query);
 			if($result){
 				$row=mysql_fetch_array($result);
