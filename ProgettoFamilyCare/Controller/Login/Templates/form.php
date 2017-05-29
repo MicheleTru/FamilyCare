@@ -16,7 +16,7 @@
 			<div class="card card-container">
 			<h2 class='login_title text-center'>ACCEDI</h2>
 			<hr>
-		</center>
+		<center>
 			    <form class="form-signin" action="index.php?controller=login" method="POST">
 			        <center>
 					<input type="hidden" name="action" value ="doLogin">
