@@ -29,7 +29,12 @@
 		}
 		
 		public function save(){
-			UtenteTabella::save($this);
+			$query=sprintf("insert into utenti (username, password) values ('%s', SHA1('%s'));",
+								$this->username,
+								$this->password;
+			
+			mysql_query($query);
+			#UtenteTabella::save($this);
 		}
 		
 		public function delete(){
