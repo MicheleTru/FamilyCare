@@ -15,7 +15,7 @@
 		case 'doLogin':
 			if(UtenteTabella::getByUsernamePassword($_REQUEST['username'], $_REQUEST['password']) != NULL){
 				$_SESSION['username']=$_REQUEST['username'];
-				header("Location: index.php?controller=persona&action=list");
+				echo "Benvenuto";
 			}else{
 				echo '<script language="javascript">';
 				echo 'alert ("Credenziali errate! Riprova")';
@@ -32,8 +32,8 @@
 			
 		case 'doRegister':
 			$utente = new Utente();
-			$utente->setUsername ($_REQUEST['username']);
-			$utente->setPassword ($_REQUEST['password']);
+			$utente->setUsername($_REQUEST['username']);
+			$utente->setPassword($_REQUEST['password']);
 			if (UtenteTabella::getByUsername($_REQUEST['username']) != NULL){
 				$utente->save();
 				header ("Location: index.php?controller=login&action=login");
