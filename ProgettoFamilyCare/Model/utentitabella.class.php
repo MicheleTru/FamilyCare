@@ -48,19 +48,14 @@
 				return NULL;
 			}
 		}
-		public static function getByUsernameAndPassword($username,$password){
-			$query = sprintf("SELECT * FROM utenti where username='%s' and password='%s';",$username,sha1($password));
-			print ($query);
-			$result = mysql_query($query);
-			if(mysql_affected_rows()!=1){
-				return NULL;
-			}
-			$row = mysql_fetch_array($result);
-			$utente = new Utente();
-			$utente->setId($row["id"]);
-			$utente->setUsername($row["username"]);
-			$utente->setPassword($row["password"]);
-			return $utente;
+		public static function getByUsernameAndPassword($user, $pass){
+		$query=sprintf("SELECT * FROM Utenti WHERE username='%s' AND password='%s';", $user, sha1($pass));
+		mysql_query($query);
+		if(mysql_affected_rows()!=1){
+			print('Errore, credenziali errate');
+			return FALSE;
+		}else
+			return TRUE;
 		}
 		
 		public static function getByUsername($username){
