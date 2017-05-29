@@ -4,12 +4,12 @@
 		
 		public static function save($utente){
 			if($utente->getId()){
-				$query=sprintf("update Utenti set username='%s', password=SHA1('%s') where id=%d;",
+				$query=sprintf("update utenti set username='%s', password=SHA1('%s') where id=%d;",
 								$utente->getUsername(),
 								$utente->getPassword(),
 								$utente->getId());
 			}else{
-				$query=sprintf("insert into Utenti (username, password) values ('%s', SHA1('%s'));",
+				$query=sprintf("insert into utenti (username, password) values ('%s', SHA1('%s'));",
 								$utente->getUsername(),
 								$utente->getPassword());
 			}
@@ -23,7 +23,7 @@
 		}
 		
 		public static function remove($utente){
-			$query=sprintf("delete from Utente where id=%d;",$utente->getId());
+			$query=sprintf("delete from utenti where id=%d;",$utente->getId());
 			mysql_query($query);
 			
 			if(mysql_affected_rows()==1){
@@ -34,7 +34,7 @@
 		}
 		
 		public static function getById($id){
-			$query=sprintf("select * from Utente where id=%d;",$id);
+			$query=sprintf("select * from utenti where id=%d;",$id);
 			$result=mysql_query($query);
 			if($result){
 				$row=mysql_fetch_array($result);
@@ -50,7 +50,7 @@
 		}
 		
 		public static function getByUsernamePassword($username, $password){
-			$query = sprintf("select username from Utenti where username='%s' and password=sha1('%s')",$username, $password);
+			$query = sprintf("select username from utenti where username='%s' and password=sha1('%s')",$username, $password);
 			$result=mysql_query($query);
 			if($result){
 				$row=mysql_fetch_array($result);
@@ -61,7 +61,7 @@
 		}
 		
 		public static function getByUsername($username){
-			$query = sprintf ("select username from Utenti", $username);
+			$query = sprintf ("select username from utenti", $username);
 			$result = mysql_query($query);
 			if($result){
 				$row=mysql_fetch_array($result);
@@ -73,7 +73,7 @@
 				
 		
 		public static function getAll(){
-			$query=sprintf("select * from Utenti order by username;");
+			$query=sprintf("select * from utenti order by username;");
 			$result=mysql_query($query);
 			$utenti=array();
 			if($result){
