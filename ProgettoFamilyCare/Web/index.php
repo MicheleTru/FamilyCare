@@ -13,17 +13,17 @@
 		$auth = TRUE;
 	}
 	
-	#if (isset ($_REQUEST['action'])){
-	#	$action = $_REQUEST['action'];
-#	}else{
-#		$action = 'list';
+	if (isset ($_REQUEST['action'])){
+		$action = $_REQUEST['action'];
+	#}else{
+	#	$action = 'list';
 	}
 	
-	#if (isset ($_REQUEST['controller'])){
-	#	$controller = $_REQUEST['controller'];
+	if (isset ($_REQUEST['controller'])){
+		$controller = $_REQUEST['controller'];
 #	}else{
 #		$controller = 'persona';
-#	}
+	}
 	
 	if (!$auth) {
 		if ($controller != 'login' && $controller != 'register') {
@@ -36,25 +36,14 @@
 	}
 	
 	switch ($controller){
-		
-	#	case 'persona':
-	#		require ("../Controller/Persona/controller.php");
-	#		break;
-	#		
-	#	case 'disciplina':
-	#		require ("../Controller/Disciplina/controller.php");
-	#		break;
-			
-	#	case 'nazione':
-	##		require ("../Controller/Nazione/controller.php");
-	#		break;
 			
 		case 'login':
 			require ("../Controller/Login/controller.php");
 			break;
+			
 	}
 	
-	if($auth != TRUE){
+	if($auth == FALSE){
 #		require ("../Layout/layout.php");
 #	}else{
 		
