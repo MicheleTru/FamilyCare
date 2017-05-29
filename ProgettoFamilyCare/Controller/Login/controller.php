@@ -29,6 +29,8 @@
 			
 		case 'doRegister':
 			$utente = new Utente();
+			echo $_POST['username'];
+			echo $_POST['password'];
 			$utente->setUsername($_POST['username']);
 			$utente->setPassword($_POST['password']);
 			if (UtenteTabella::getByUsernameAndPassword($_POST['username'], sha1 ($_POST['password'])) != NULL){
