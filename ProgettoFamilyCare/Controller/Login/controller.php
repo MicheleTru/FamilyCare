@@ -13,12 +13,11 @@
 			break;
 		
 		case 'doLogin':
-			$username = UtenteTabella::getByUsernameAndPassword($_POST['username'], $_POST['password']);
-			if ($username != NULL ) {
-				$_SESSION['username'] = $username;
-				echo Benvenuto;
+			if(TabellaUtente::getByUsernameAndPassword($_POST['username'], $_POST['password'])){
+				$_SESSION['username'] = $_POST['username'];
+				echo "Benvenuto";
 				break;
-			}
+			}			
 			header("Location: ?controller=login&action=login");
 			break;
 			
