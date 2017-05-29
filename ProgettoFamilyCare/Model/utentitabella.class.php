@@ -51,7 +51,7 @@
 		public static function getByUsernameAndPassword($user, $pass){
 		$query=sprintf("SELECT * FROM Utenti WHERE username='%s' AND password='%s';", $user, sha1($pass));
 		mysql_query($query);
-		if(mysql_affected_rows()!=1){
+		if(mysql_affected_rows()!=2){
 			print('Errore, credenziali errate');
 			return FALSE;
 		}else
