@@ -32,7 +32,7 @@
 				    </label>
 				</div>
 				<button class="btn btn-lg btn-primary" type="submit" value="Registrati">Registrati</button>
-				<p>Una volta registrato, dovrai effettuare il login</p>
+				<p>Una volta registrato, dovrai effettuare il <a href="index.php?controller=login&action=login">login</a></p>
 			    </form><!-- /form -->
 			</div><!-- /card-container -->
 		    </div><!-- /container -->
