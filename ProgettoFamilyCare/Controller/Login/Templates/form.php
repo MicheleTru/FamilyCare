@@ -7,8 +7,8 @@
 	</head>
 	
 	<body>
-		    <script src="https://use.typekit.net/ayg4pcz.js"></script>
-		    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+		    <!--<script src="https://use.typekit.net/ayg4pcz.js"></script>
+		    <script>try{Typekit.load({ async: true });}catch(e){}</script> -->
 		<center>	
 		    <div class="container">
 			
