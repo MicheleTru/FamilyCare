@@ -13,8 +13,10 @@
 			break;
 		
 		case 'doLogin':
-			if(UtenteTabella::getByUsernamePassword($_REQUEST['username'], $_REQUEST['password']) != NULL){
-				$_SESSION['username']=$_REQUEST['username'];
+			$username=NULL;
+			if(UtenteTabella::getByUsernamePassword($_POST['username'], sha1 ($_POST['password'])) != NULL){
+				$username =  UtenteTabella::getByUsernameAndPassword($_POST['username'], sha1 ($_POST['password']));
+				$_SESSION['username']=$username;
 				echo "Benvenuto";
 			}else{
 				echo '<script language="javascript">';
@@ -24,6 +26,7 @@
 				$content=get_include_contents("../Controller/Login/Templates/form.php");
 			}
 			break;
+			
 		
 		case 'doLogout':
 			session_destroy();
@@ -32,9 +35,9 @@
 			
 		case 'doRegister':
 			$utente = new Utente();
-			$utente->setUsername($_REQUEST['username']);
-			$utente->setPassword($_REQUEST['password']);
-			if (UtenteTabella::getByUsername($_REQUEST['username']) != NULL){
+			$utente->setUsername($_POST['username']);
+			$utente->setPassword($_POST['password']);
+			if (UtenteTabella::getByUsername($_POST['username'], sha1 ($_POST['password'])) != NULL){
 				$utente->save();
 				header ("Location: index.php?controller=login&action=login");
 			}else{
