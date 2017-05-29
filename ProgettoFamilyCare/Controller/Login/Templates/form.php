@@ -31,7 +31,7 @@
 				    </label>
 				</div>
 				<button class="btn btn-lg btn-primary" type="submit" value="Login">Login</button>
-				<p>Sei un nuovo membro?? <a href="form_register.php" class="">Sign up</a></p>
+				<p>Non sei registrato? <a href="index.php?controller=login&action=register">Registrati!</a></p>
 			    </form><!-- /form -->
 			</div><!-- /card-container -->
 		    </div><!-- /container -->
