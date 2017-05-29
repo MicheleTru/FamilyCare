@@ -47,6 +47,7 @@
 			break;
 			
 		case 'register':
+			console.log('prova3');
 			$content=get_include_contents ("../Controller/Login/Templates/form_register.php");
 			break;
 			
