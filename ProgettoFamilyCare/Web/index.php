@@ -2,12 +2,6 @@
 	session_start();
 	
 	require ("../Config/connessione.php");
-
-
-
-
-
-
 	require ("../Model/utenti.class.php");
 	require ("../Model/utentitabella.class.php");
 	require ("../Lib/lib.php");
@@ -23,10 +17,10 @@
 	#	$action = $_REQUEST['action'];
 #	}else{
 #		$action = 'list';
-#	}
+	}
 	
-	if (isset ($_REQUEST['controller'])){
-		$controller = $_REQUEST['controller'];
+	#if (isset ($_REQUEST['controller'])){
+	#	$controller = $_REQUEST['controller'];
 #	}else{
 #		$controller = 'persona';
 #	}
