@@ -15,7 +15,7 @@
 		case 'doLogin':
 			if(UtenteTabella::getByUsernameAndPassword($_POST['username'], $_POST['password'])){
 				$_SESSION['username'] = $_POST['username'];
-				echo "Benvenuto ";
+				echo "Benvenuto " + $_SESSION['username'];
 				break;
 			}			
 			header("Location: ?controller=login&action=login");
