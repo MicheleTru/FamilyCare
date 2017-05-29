@@ -13,6 +13,7 @@
 			break;
 		
 		case 'doLogin':
+			console.log('prova2');
 			if(UtenteTabella::getByUsernameAndPassword($_POST['username'], $_POST['password'])){
 				$_SESSION['username'] = $_POST['username'];
 				echo "Benvenuto " + $_SESSION['username'];
@@ -28,6 +29,7 @@
 			break;
 			
 		case 'doRegister':
+			console.log('prova');
 			$utente = new Utente();
 			console.log('prova');
 			console.log($_GET['username']);
