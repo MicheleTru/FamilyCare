@@ -7,10 +7,6 @@
 	<body>
 
 		<div class="container">
-			
-			<header>
-			   <h1>REGISTRATI</h1>
-			</header>
 			<article>
 			  <?php echo $content ?>
 			</article>
