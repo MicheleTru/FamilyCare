@@ -29,12 +29,9 @@
 			break;
 			
 		case 'doRegister':
-			console.log('prova');
+			die('doRegister');
 			$utente = new Utente();
-			console.log('prova');
-			console.log($_GET['username']);
-			console.log($_REQUEST['username']);
-			console.log($_POST['username']);
+	
 			$utente->setUsername($_POST['username']);
 			$utente->setPassword($_POST['password']);
 			if (UtenteTabella::getByUsernameAndPassword($_POST['username'],sha1($_POST['password'])) != NULL){
