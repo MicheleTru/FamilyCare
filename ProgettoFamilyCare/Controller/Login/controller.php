@@ -34,7 +34,7 @@
 			$utente->setUsername($_POST['username']);
 			$utente->setPassword($_POST['password']);
 			
-			if (UtenteTabella::getByUsername($_POST['username']) != NULL){
+			if (UtenteTabella::getByUsername($_POST['username']) == false){
 				$utente->save();
 				header ("Location: index.php?controller=login&action=login");
 			}else{	
