@@ -12,7 +12,7 @@
 				$query=sprintf("insert into utenti (username,password) values ('%s',SHA1('%s'));",
 								$utente->getUsername(),
 								$utente->getPassword());
-			}
+			}die($query);
 			mysqli_query($query);
 			
 			if(mysqli_affected_rows()==1){
