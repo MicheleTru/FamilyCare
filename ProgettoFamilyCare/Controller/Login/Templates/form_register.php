@@ -23,9 +23,9 @@
 				<center>
 				<span id="reauth-email" class="reauth-email"></span>
 				<p class="input_title">Utente</p>
-				<input type="text" id="username" class="login_box" required autofocus>
+				<input type="text" id="username" name="username" class="login_box" required autofocus>
 				<p class="input_title">Password</p>
-				<input type="password" id="password" class="login_box" required>
+				<input type="password" id="password" name="password" class="login_box" required>
 				<div id="remember" class="checkbox">
 				    <label>
 
