@@ -62,9 +62,9 @@
 		
 		public static function getByUsername($user){
 			$query = sprintf ("select username from utenti where username='%s';", $user);
-			mysql_query($query);
+			$result=mysql_query($query);
 			
-			if(mysql_num_rows()>0){
+			if(mysql_num_rows($result)>0){
 				return true;
 			}else{
 				return false;
