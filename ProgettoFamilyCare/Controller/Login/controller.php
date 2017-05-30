@@ -33,7 +33,7 @@
 	
 			$utente->setUsername($_POST['username']);
 			$utente->setPassword($_POST['password']);
-			die("utente controller:" . $_POST['username'] . '' . $utente->getPassword());
+			
 			if (UtenteTabella::getByUsernameAndPassword($_POST['username'],sha1($_POST['password'])) != NULL){
 				$utente->save();
 				header ("Location: index.php?controller=login&action=login");
