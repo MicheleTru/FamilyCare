@@ -13,7 +13,7 @@
 								$utente->getUsername(),
 								$utente->getPassword());
 			}
-			
+			print_r($query);
 			mysqli_query($query);
 			
 			if(mysqli_affected_rows()==1){
