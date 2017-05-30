@@ -14,7 +14,7 @@
 								$utente->getPassword());
 			}
 			
-			mysqli_query($query);
+			mysql_query($query);
 			die($query);
 			if(mysqli_affected_rows()==1){
 				return true;
