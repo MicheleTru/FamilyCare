@@ -13,7 +13,7 @@
 								$utente->getUsername(),
 								$utente->getPassword());
 			}
-			die("utente :" . $utente->getUsername() . '' . $utente->getPassword());
+			
 			mysqli_query($query);
 			
 			if(mysqli_affected_rows()==1){
