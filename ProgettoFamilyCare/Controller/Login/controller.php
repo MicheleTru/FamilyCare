@@ -29,7 +29,6 @@
 			break;
 			
 		case 'doRegister':
-			die('doRegister');
 			$utente = new Utente();
 	
 			$utente->setUsername($_POST['username']);
