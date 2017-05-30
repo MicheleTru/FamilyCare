@@ -51,8 +51,8 @@
 		}
 		public static function getByUsernameAndPassword($user, $pass){
 		$query=sprintf("SELECT * FROM utenti WHERE username='%s' AND password='%s';", $user, sha1($pass));
-		mysqli_query($query);
-		if(mysqli_affected_rows()!=0){
+		mysql_query($query);
+		if(mysql_num_rows()==0){
 			
 			print('Errore, credenziali errate');
 			return FALSE;
@@ -61,13 +61,12 @@
 		}
 		
 		public static function getByUsername($user){
-			$query = sprintf ("select username from utenti", $user);
-			$result = mysql_query($query);
-			if($result){
-				$row=mysql_fetch_array($result);
-				return $row['username'];
+			$query = sprintf ("select username from utenti where username=%s", $user);
+			mysql_query($query);
+			if(mysql_num_rows()>0){
+				return true;
 			}else{
-				return NULL;
+				return false;
 			}
 		}
 				
