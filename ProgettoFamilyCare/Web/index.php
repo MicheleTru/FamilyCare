@@ -45,7 +45,7 @@
 	}
 	
 	if($auth == FALSE){
-		require ("../Layout/layout.php");
+#		require ("../Layout/layout.php");
 	}else{
 		
 		switch ($action){
