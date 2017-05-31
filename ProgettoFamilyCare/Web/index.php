@@ -15,14 +15,14 @@
 	
 	if (isset ($_REQUEST['action'])){
 		$action = $_REQUEST['action'];
-	#}else{
-	#	$action = 'list';
+	}else{
+		$action = 'list';
 	}
 	
 	if (isset ($_REQUEST['controller'])){
 		$controller = $_REQUEST['controller'];
-#	}else{
-#		$controller = 'persona';
+	}else{
+		$controller = 'persona';
 	}
 	
 	if (!$auth) {
@@ -44,8 +44,8 @@
 	}
 	
 	if($auth == FALSE){
-#		require ("../Layout/layout.php");
-#	}else{
+		require ("../Layout/layout.php");
+	}else{
 		
 		switch ($action){
 			case 'login':
