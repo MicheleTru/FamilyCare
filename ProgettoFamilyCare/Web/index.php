@@ -16,13 +16,13 @@
 	if (isset ($_REQUEST['action'])){
 		$action = $_REQUEST['action'];
 	}else{
-		$action = 'list';
+#		$action = 'list';
 	}
 	
 	if (isset ($_REQUEST['controller'])){
 		$controller = $_REQUEST['controller'];
 	}else{
-		$controller = 'persona';
+	#	$controller = 'persona';
 	}
 	
 	if (!$auth) {
@@ -40,6 +40,7 @@
 		case 'login':
 			require ("../Controller/Login/controller.php");
 			break;
+			
 			
 	}
 	
