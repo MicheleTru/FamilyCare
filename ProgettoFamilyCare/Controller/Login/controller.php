@@ -16,7 +16,7 @@
 			console.log('prova2');
 			if(UtenteTabella::getByUsernameAndPassword($_POST['username'], $_POST['password'])){
 				$_SESSION['username'] = $_POST['username'];
-				echo "Benvenuto " + $_SESSION['username'];
+				$content=get_include_contents('../controller/file.html');
 				break;
 			}			
 			header("Location: ?controller=login&action=login");
